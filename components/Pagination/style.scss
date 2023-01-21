@@ -1,0 +1,90 @@
+.pagination_squre {
+    li {
+        a {
+            @apply inline-flex items-center justify-center rounded leading-5 w-9 h-9 bg-white border border-gray-200 text-gray-600 shadow;
+            user-select: none;
+        }
+
+        &.page_item_squre {
+            a {
+                @apply inline-flex items-center justify-center leading-5 w-9 h-9 bg-white border border-gray-200 text-gray-600 text-sm font-medium rounded-none hover:bg-indigo-500 hover:text-white truncate transition duration-150;
+            }
+
+            &.active {
+                a {
+                    @apply bg-indigo-500 text-white
+                }
+            }
+        }
+
+        &:last-child {
+            @apply mr-2
+        }
+
+        &:first-child {
+            @apply ml-2
+        }
+
+        &.disabled {
+            a {
+                @apply text-gray-300 cursor-not-allowed
+            }
+        }
+    }
+}
+
+.pagination_circle {
+    li {
+        a {
+            @apply inline-flex items-center justify-center rounded-full leading-5 w-9 h-9 text-gray-600 hover:text-indigo-500 text-sm font-medium;
+            user-select: none;
+        }
+
+        &:last-child {
+            @apply mr-2 bg-white border-gray-200 hover:border-gray-300 text-indigo-500 rounded-full;
+        }
+
+        &:first-child {
+            @apply ml-2
+        }
+
+        &.page_item_circle {
+            &.active {
+                a {
+                    @apply bg-white border border-gray-200 text-indigo-500 shadow-sm
+                }
+            }
+        }
+
+        &.disabled {
+            a {
+                @apply text-gray-300 cursor-not-allowed bg-white border-gray-200 hover:border-gray-300 text-indigo-500;
+            }
+
+            &.page_item_circle {
+                a {
+                    @apply bg-transparent
+                }
+            }
+        }
+    }
+}
+
+.pagination_primary {
+    li {
+        &.page_item_primary {
+            display: none;
+        }
+        a{
+            &:first-child{
+                @apply ml-3;
+            }
+            @apply font-medium text-sm inline-flex items-center justify-center border border-transparent rounded leading-5 shadow-sm transition hover:border-gray-300 duration-150 ease-in-out bg-white px-3 py-2  text-indigo-500;
+        }
+        &.disabled {
+            a {
+                @apply text-gray-300 cursor-not-allowed hover:border-transparent
+            }
+        }
+    }
+}
